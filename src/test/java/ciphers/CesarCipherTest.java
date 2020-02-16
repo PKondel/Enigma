@@ -13,42 +13,42 @@ public class CesarCipherTest {
     protected final String expectedTextForMixedText = "123df//";
     protected Cipher cesarCipher = new CesarCipher();
 
-    @DisplayName( "Testing correction of encoding text with no alphabetic letters")
+    @DisplayName("Testing correction of encoding text with no alphabetic letters")
     @Test
     public void testIfOnlyAlphabeticLettersAreEncoded() {
         String encoded = cesarCipher.encode(textWithNoAlphabeticLetters);
         Assertions.assertEquals(textWithNoAlphabeticLetters, encoded);
     }
 
-    @DisplayName( "Testing correction of encoding text with alphabetic letters")
+    @DisplayName("Testing correction of encoding text with alphabetic letters")
     @Test
     public void testIfEncodingModifyTextWithAlphabeticChars() {
         String encoded = cesarCipher.encode(textWithAlphabeticLetters);
         Assertions.assertEquals(expectedTextForAlphabeticLetters, encoded);
     }
 
-    @DisplayName( "Testing correction of encoding text with alphabetic and no alphabetic letters")
+    @DisplayName("Testing correction of encoding text with alphabetic and no alphabetic letters")
     @Test
     public void testIfAlphabeticAndNoAlphabeticLettersAreEncoded() {
         String encoded = cesarCipher.encode(mixedText);
         Assertions.assertEquals(expectedTextForMixedText, encoded);
     }
 
-    @DisplayName( "Testing correction of decoding text with no alphabetic letters")
+    @DisplayName("Testing correction of decoding text with no alphabetic letters")
     @Test
     public void testIfOnlyAlphabeticLettersAreDecoded() {
         String decoded = cesarCipher.decode(textWithNoAlphabeticLetters);
         Assertions.assertEquals(textWithNoAlphabeticLetters, decoded);
     }
 
-    @DisplayName( "Testing correction of decoding text with alphabetic letters")
+    @DisplayName("Testing correction of decoding text with alphabetic letters")
     @Test
     public void testIfDecodingModifyTextWithAlphabeticChars() {
         String decoded = cesarCipher.decode(expectedTextForAlphabeticLetters);
         Assertions.assertEquals(textWithAlphabeticLetters, decoded);
     }
 
-    @DisplayName( "Testing correction of decoding text with alphabetic and no alphabetic letters")
+    @DisplayName("Testing correction of decoding text with alphabetic and no alphabetic letters")
     @Test
     public void testIfAlphabeticAndNoAlphabeticLettersAreDecoded() {
         String decoded = cesarCipher.decode(expectedTextForMixedText);
