@@ -11,12 +11,32 @@
       <TextArea fx:id="inputTextArea" focusTraversable="false" layoutX="37.0" layoutY="163.0" prefHeight="201.0" prefWidth="524.0" promptText="write text you want to encode or decode" wrapText="true" />
       <Button fx:id="encodeTrigger" focusTraversable="false" layoutX="389.0" layoutY="99.0" mnemonicParsing="false" onAction="#triggerEncoding" prefHeight="25.0" prefWidth="72.0" text="Encode" textAlignment="CENTER" />
       <Button fx:id="decodeTrigger" focusTraversable="false" layoutX="490.0" layoutY="99.0" mnemonicParsing="false" onAction="#triggerDecoding" prefHeight="25.0" prefWidth="72.0" text="Decode" />
-      <Button layoutX="161.0" layoutY="52.0" mnemonicParsing="false" onAction="#saveToFile" prefHeight="25.0" prefWidth="72.0" text="Save" />
-      <Button layoutX="161.0" layoutY="90.0" mnemonicParsing="false" onAction="#loadFile" prefHeight="25.0" prefWidth="72.0" text="Load" />
-      <ChoiceBox fx:id="cipherChoiceBox" layoutX="389.0" layoutY="52.0" prefHeight="25.0" prefWidth="172.0" />
+      <Button focusTraversable="false" layoutX="161.0" layoutY="52.0" mnemonicParsing="false" onAction="#saveToFile" prefHeight="25.0" prefWidth="72.0" text="Save" />
+      <Button focusTraversable="false" layoutX="161.0" layoutY="90.0" mnemonicParsing="false" onAction="#loadFile" prefHeight="25.0" prefWidth="72.0" text="Load" />
+      <ChoiceBox fx:id="cipherChoiceBox" focusTraversable="false" layoutX="389.0" layoutY="52.0" prefHeight="25.0" prefWidth="172.0" />
       <Label layoutX="37.0" layoutY="52.0" prefHeight="25.0" prefWidth="124.0" text="Choose save directory" />
       <Label layoutX="37.0" layoutY="90.0" prefHeight="25.0" prefWidth="124.0" text="Choose file to load" />
       <Label layoutX="432.0" layoutY="35.0" prefHeight="17.0" prefWidth="109.0" text="Cipher method type" textAlignment="CENTER" />
       <Label layoutX="444.0" layoutY="82.0" prefHeight="17.0" prefWidth="91.0" text="Choose action" />
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#registerUser" text="Register" />
+              <MenuItem mnemonicParsing="false" onAction="#closeApp" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
    </children>
 </AnchorPane>

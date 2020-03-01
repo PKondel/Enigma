@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 
-public class Main extends Application {
+public class Enigma extends Application {
     private static Stage mainStage;
     private String resourcePath = "/fxml/Main.fxml";
 
